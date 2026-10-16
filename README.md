@@ -1,4 +1,3 @@
-# Vision-Guided Grasping with HiWonder JetRover
 
 > Eye-in-hand grasping & sorting on a 6DOF vision robotic arm.
 > Portfolio project for robotics / embodied-AI roles.
@@ -54,3 +53,5 @@ The original senior design that started it all — Drexel MEM-493, Group 32 (tea
 
 - [Final report (PDF)](docs/MEM-493_Senior_Design_Final_Report.pdf) — full documentation: stakeholder needs, boat design & FEA, TensorFlow bottle detection on Raspberry Pi, test data, cost analysis
 - [Final presentation slides (PDF)](docs/MEM493_Final_Presentation.pdf)
+-  [Retrospective: 2019 → 2026](docs/RETROSPECTIVE.md) — honest look back: what worked, the gaps (1.2 FPS, the unclosed loop), and how each gap became a design decision in this project
+
