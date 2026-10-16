@@ -8,12 +8,7 @@
 Use the JetRover's end-effector HD camera + 3D depth camera to close the
 perception-action loop: detect, estimate pose, plan, grasp, sort.
 
-**First mission: marine plastic-bottle detection and pickup.** A continuation
-of my 2019 senior design (TensorFlow CNN bottle recognition, 95% precision) —
-this time with modern YOLO + TensorRT on Jetson, trained for the marine
-environment (floating bottles, water glare, waves), ending with the arm
-physically picking bottles up. Ocean-plastic cleanup: tech for good,
-and a story only I can tell.
+**First mission: marine plastic-bottle detection and pickup.** A direct sequel to my 2019 Drexel senior design (MEM-493, Group 32) — the "Automated River Cleaner," a catamaran boat robot with a TensorFlow bottle detector running on a Raspberry Pi. It worked: 100 bottle-recognition tests at ~80% average confidence, and river field tests collecting 5 bottles in 90 seconds. But the Pi managed only 1.2 FPS — too slow for a 1.5 m/s river, as our final report admits. Seven years later, the same mission gets YOLO + TensorRT on a Jetson Orin NX at 30+ FPS, plus a 6DOF arm to close the grasp loop. Same river, new silicon.
 
 ## Hardware
 
