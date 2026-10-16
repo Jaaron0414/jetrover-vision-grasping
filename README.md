@@ -47,3 +47,10 @@ ROS 2, YOLOv8/YOLO11, TensorRT, OpenCV, depth point clouds, Python
 - R1: bottle dataset + YOLO training
 - R2: grasping closed loop on bottles
 - R3: demo and field test
+
+## Project archive (2019)
+
+The original senior design that started it all — Drexel MEM-493, Group 32 (team of 5; I was project manager):
+
+- [Final report (PDF)](docs/MEM-493_Senior_Design_Final_Report.pdf) — full documentation: stakeholder needs, boat design & FEA, TensorFlow bottle detection on Raspberry Pi, test data, cost analysis
+- [Final presentation slides (PDF)](docs/MEM493_Final_Presentation.pdf)
