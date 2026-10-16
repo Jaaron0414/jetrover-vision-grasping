@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# ROS 2
+build/
+install/
+log/
+*.bag
+*.db3
+
+# Models and data
+*.pt
+*.onnx
+*.engine
+*.trt
+datasets/
+results/
+logs/
+
+# OS
+.DS_Store
