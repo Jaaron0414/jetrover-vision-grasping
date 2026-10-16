@@ -7,8 +7,13 @@
 
 Use the JetRover's end-effector HD camera + 3D depth camera to close the
 perception-action loop: detect, estimate pose, plan, grasp, sort.
-The classic "intelligent sorting" demo, built as a real engineering pipeline
-instead of a vendor sample script.
+
+**First mission: marine plastic-bottle detection and pickup.** A continuation
+of my 2019 senior design (TensorFlow CNN bottle recognition, 95% precision) —
+this time with modern YOLO + TensorRT on Jetson, trained for the marine
+environment (floating bottles, water glare, waves), ending with the arm
+physically picking bottles up. Ocean-plastic cleanup: tech for good,
+and a story only I can tell.
 
 ## Hardware
 
@@ -21,21 +26,29 @@ instead of a vendor sample script.
 Camera stream to YOLO detection to depth-based 6D pose to arm motion planning
 to grasp execution to place / sort by class.
 
+## Dataset (bottle detection)
+
+- TACO (Trash Annotations in Context): in-the-wild trash incl. plastic bottles
+- Roboflow Universe: ready-made YOLO-format bottle detection datasets
+- JAMSTEC marine debris dataset
+- Self-collected: photos of floating bottles on water (phone camera) — the key
+  marine-specific data: reflections, waves, half-submerged bottles
+
 ## Roadmap
 
 - R0 Bring-up: ROS 2 bring-up, camera calibration, arm teleop and joint limits
-- R1 Perception: YOLO (TensorRT on Orin NX) + depth point-cloud pose estimation
-- R2 Grasping loop: detection-to-grasp closed loop, success-rate benchmark
-- R3 Sorting demo: multi-class sorting task + demo video
+- R1 Perception: bottle dataset assembly, YOLOv8/YOLO11 training, TensorRT export, deploy on Orin NX
+- R2 Grasping loop: detection-to-grasp closed loop on bottles, success-rate benchmark
+- R3 Demo: multi-class sorting + demo video, marine-environment field test
 
 ## Tech
 
-ROS 2, YOLOv8, TensorRT, OpenCV, depth point clouds, Python
+ROS 2, YOLOv8/YOLO11, TensorRT, OpenCV, depth point clouds, Python
 
 ## Status
 
-- Hardware on hand (JetRover Ultimate Kit)
+- Hardware on hand; mission defined (marine bottle pickup)
 - R0: ROS 2 bring-up and calibration — next
-- R1: perception pipeline
-- R2: grasping closed loop
-- R3: sorting demo
+- R1: bottle dataset + YOLO training
+- R2: grasping closed loop on bottles
+- R3: demo and field test
